@@ -5,10 +5,14 @@ key = Fernet.generate_key()
 
 cipher = Fernet(key)
 # Encrypt a message
-message = b"Hello, this is a secret message!"
-encrypted = cipher.encrypt(message)
-print("Encrypted:", encrypted)
+message = input("Enter a message to encrypt: ")
+encrypted = cipher.encrypt(message.encode())
+print("Encrypted:", encrypted.decode())
 
 # Decrypt the message
-decrypted = cipher.decrypt(encrypted)
-print("Decrypted:", decrypted.decode())
+encrypted_message = input("Enter message to decrypt: ")
+try:
+    decrypted = cipher.decrypt(encrypted_message.encode())
+    print("Decrypted:", decrypted.decode())
+except Exception:
+    print("Decryption failed. Please ensure the encrypted message is correct.")
