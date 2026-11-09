@@ -16,13 +16,13 @@ Ik gebruik AES-128 en HMAC--SHA256 via de bibliotheek Fernet in Python voor mijn
 
 
 ## 3. Beheer en beveiliging van de geheime sleutel
-**Genereren**
+**Genereren**:
 Met Fernet.generate_key() wordt er automatisch een willekeurig geheime sleutel gemaakt.
 
-**Opslaan**
+**Opslaan**:
 De sleutel wordt alleen tijdens het gebruik van de applicatie bewaard. Als de applicatie wordt afgesloten, raak je de sleutel kwijt. Bij opnieuw opstarten wordt een nieuwe sleutel aangemaakt daardoor kan je oude bericht niet meer ontsleutelen.
 
-**Uitwisselen**
+**Uitwisselen**:
 Deze applicatie kan nog niet de sleutel veilig delen met anderen. Een oplossing ervan kan zijn: wachtwoord gebruiken om sleutel te maken, dit kan met KDF (PBKDF2/Argon2id).
 
 **Beveiligingsrisico's**
