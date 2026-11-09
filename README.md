@@ -28,3 +28,9 @@ Deze applicatie kan nog niet de sleutel veilig delen met anderen. Een oplossing 
 **Beveiligingsrisico's**
 - sleutel kwijtraken: kan oude bericht niet meer lezen na applicatie afsluiten want bij opstarten van applicatie wordt elke keer een nieuwe sleutel aangemaakt.
 - Elke gebruiker een eigen sleutel geven: iedereen krijgt dan een andere sleutel. Als één sleutel uitlekt, hebben een andere gebruikers geen last ervan. 
+
+
+4. Reflecteren
+Mijn applicatie past bij de Kerckhoffs's Principe;beveiligssysteem moet veilig blijven, ook al weer iedereen hoe het systeem werkt. De sleutel moet geheim blijven, omdat iedereen mag weten hoe mijn applicatie werkt en welke encryptiemethode ik gebruik. En zonder de sleutel kunnen ingevoerde input niet gelezen worden.
+
+Nadeel van mijn applicatie is bij iedere opstart wordt een nieuwe sleutel gemaakt, dit maakt oude bericht ontsleutelen en sleutel delen met anderen lastig.
